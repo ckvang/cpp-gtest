@@ -3,8 +3,7 @@
 
 
 /**
- * Worry if only one child is smiling or if all children are smiling
-**/
+ * Worry if only one child is smiling or if all children are smiling **/
 bool Rando::shouldWorry(bool childASmile, bool childBSmile, bool childCSmile)
 {
 	if( childASmile && childBSmile && childCSmile )
@@ -38,5 +37,11 @@ bool Rando::isPrime(int num)
 **/
 int Rando::nearestToZero(int a, int b)
 {
-	return 0;
+  // Note: this also covers if a == b
+  if( a != 0 && a <= b)
+    return a;
+  else if( b != 0 && b < a)
+    return b;
+  else
+	  return 0;
 }

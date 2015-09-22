@@ -28,3 +28,9 @@ TEST(RandoTest, allChildrenSmile)
 	Rando rando;
 	ASSERT_TRUE( rando.shouldWorry(true,true,true) );
 }
+
+TEST(RandoTest, aIsNearestToZero)
+{
+	Rando rando;
+	ASSERT_EQ( rando.nearestToZero(1, 2), 1 );
+}
