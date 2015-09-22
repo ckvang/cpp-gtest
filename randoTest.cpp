@@ -35,6 +35,24 @@ TEST(RandoTest, aIsDivisibleByB)
 	ASSERT_TRUE( rando.isDivisibleBy(4, 2) );
 }
 
+TEST(RandoTest, aIsNotDivisibleByB)
+{
+	Rando rando;
+	ASSERT_FALSE( rando.isDivisibleBy(4, 3) );
+}
+
+TEST(RandoTest, bIsDivisibleByA)
+{
+	Rando rando;
+	ASSERT_TRUE( rando.isDivisibleBy(2, 4) );
+}
+
+TEST(RandoTest, bIsNotDivisibleByA)
+{
+	Rando rando;
+	ASSERT_FALSE( rando.isDivisibleBy(3, 4) );
+}
+
 TEST(RandoTest, posAIsNearestToZero)
 {
 	Rando rando;
