@@ -29,6 +29,12 @@ TEST(RandoTest, allChildrenSmile)
 	ASSERT_TRUE( rando.shouldWorry(true,true,true) );
 }
 
+TEST(RandoTest, aIsDivisibleByB)
+{
+	Rando rando;
+	ASSERT_TRUE( rando.isDivisibleBy(4, 2) );
+}
+
 TEST(RandoTest, posAIsNearestToZero)
 {
 	Rando rando;
