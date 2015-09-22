@@ -23,10 +23,32 @@ class RandoTest : public ::testing::Test
 		virtual void TearDown(){} //clean up after each test, (before destructor) 
 };
 
+/******************************************************************************
+ * Tests for shouldWorry()
+ *****************************************************************************/
+
 TEST(RandoTest, allChildrenSmile)
 {
 	Rando rando;
 	ASSERT_TRUE( rando.shouldWorry(true,true,true) );
+}
+
+TEST(RandoTest, noChildrenSmile)
+{
+	Rando rando;
+	ASSERT_FALSE( rando.shouldWorry(false, false, false) );
+}
+
+TEST(RandoTest, oneChildSmile)
+{
+	Rando rando;
+	ASSERT_TRUE( rando.shouldWorry(true,false,false) );
+}
+
+TEST(RandoTest, twoChildrenSmile)
+{
+	Rando rando;
+	ASSERT_FALSE( rando.shouldWorry(true,true,false) );
 }
 
 /******************************************************************************
