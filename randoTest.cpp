@@ -61,6 +61,12 @@ TEST(RandoTest, bIsNotDivisibleByA)
  * Tests for isPrime()
  *****************************************************************************/
 
+TEST(RandoTest, zeroIsNotPrime)
+{
+	Rando rando;
+	ASSERT_FALSE( rando.isPrime(0) );
+}
+
 TEST(RandoTest, numIsPrime)
 {
 	Rando rando;
