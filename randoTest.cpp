@@ -29,8 +29,38 @@ TEST(RandoTest, allChildrenSmile)
 	ASSERT_TRUE( rando.shouldWorry(true,true,true) );
 }
 
-TEST(RandoTest, aIsNearestToZero)
+TEST(RandoTest, posAIsNearestToZero)
 {
 	Rando rando;
 	ASSERT_EQ( rando.nearestToZero(1, 2), 1 );
+}
+
+TEST(RandoTest, negAIsNearestToZero)
+{
+	Rando rando;
+	ASSERT_EQ( rando.nearestToZero(-1, 2), -1 );
+}
+
+TEST(RandoTest, posBIsNearestToZero)
+{
+	Rando rando;
+	ASSERT_EQ( rando.nearestToZero(2, 1), 1 );
+}
+
+TEST(RandoTest, negBIsNearestToZero)
+{
+	Rando rando;
+	ASSERT_EQ( rando.nearestToZero(2, -1), -1 );
+}
+
+TEST(RandoTest, aAndBNearestToZero)
+{
+	Rando rando;
+	ASSERT_EQ( rando.nearestToZero(1, 1), 1 );
+}
+
+TEST(RandoTest, errorNearestToZero)
+{
+	Rando rando;
+	ASSERT_EQ( rando.nearestToZero(0, 1), 0 );
 }

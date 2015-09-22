@@ -43,5 +43,5 @@ int Rando::nearestToZero(int a, int b)
   else if( b != 0 && b < a)
     return b;
   else
-	  return 0;
+	  return 0; // Indicates error
 }
