@@ -29,6 +29,10 @@ TEST(RandoTest, allChildrenSmile)
 	ASSERT_TRUE( rando.shouldWorry(true,true,true) );
 }
 
+/******************************************************************************
+ * Tests for isDivisibleBy()
+ *****************************************************************************/
+
 TEST(RandoTest, aIsDivisibleByB)
 {
 	Rando rando;
@@ -52,6 +56,26 @@ TEST(RandoTest, bIsNotDivisibleByA)
 	Rando rando;
 	ASSERT_FALSE( rando.isDivisibleBy(3, 4) );
 }
+
+/******************************************************************************
+ * Tests for isPrime()
+ *****************************************************************************/
+
+TEST(RandoTest, numIsPrime)
+{
+	Rando rando;
+	ASSERT_TRUE( rando.isPrime(3) );
+}
+
+TEST(RandoTest, numIsNotPrime)
+{
+	Rando rando;
+	ASSERT_FALSE( rando.isPrime(4) );
+}
+
+/******************************************************************************
+ * Tests for nearestToZero()
+ *****************************************************************************/
 
 TEST(RandoTest, posAIsNearestToZero)
 {

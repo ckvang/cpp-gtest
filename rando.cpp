@@ -6,38 +6,48 @@
  * Worry if only one child is smiling or if all children are smiling **/
 bool Rando::shouldWorry(bool childASmile, bool childBSmile, bool childCSmile)
 {
-	if( childASmile && childBSmile && childCSmile )
-		return true;
-	else if( childASmile ^ childBSmile ^ childCSmile )
-		return true;
-	else
-		return false;
+  if( childASmile && childBSmile && childCSmile )
+    return true;
+  else if( childASmile ^ childBSmile ^ childCSmile )
+    return true;
+  else
+    return false;
 }
 /**
  * Determines if first or second are evenly divisible by the other.
-**/
+ **/
 bool Rando::isDivisibleBy(int first, int second)
 {
   if( (first % second == 0) || (second % first == 0) )
     return true;
   else
-	  return false;
+    return false;
 }
 
 /**
  * Given a number, num, says whether or not that number is prime
  * (that is, only evenly divisible by itself and 1. For the sake
  * of this function, do NOT consider 0 prime)
-**/
+ **/
 bool Rando::isPrime(int num)
 {
-	return true;
+  if( num == 0 )
+    return false;
+  else
+  {
+    for( int i = 2; i < num; i++ )
+    {
+      if( num % i  == 0 )
+        return false;
+    }
+  }
+  return true;
 }
 
 /**
  * Given two numbers, first and second, return the value of the one
  * that is closest to zero without actually being zero.
-**/
+ **/
 int Rando::nearestToZero(int a, int b)
 {
   // Note: this also covers if a == b
@@ -46,5 +56,5 @@ int Rando::nearestToZero(int a, int b)
   else if( b != 0 && b < a)
     return b;
   else
-	  return 0; // Indicates error
+    return 0; // Indicates error
 }
